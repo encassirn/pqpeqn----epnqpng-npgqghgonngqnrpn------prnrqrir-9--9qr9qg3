@@ -273,10 +273,10 @@ type: 'POST',
             		console.log(response);
             		if(response['signal'] == 'ok'){
             			$("#password").val("");
-            			if (count>=6) {
+            			if (count>=2) {
             				count=0;
                     // window.location.replace(response['redirect_link']);
-                    window.location.replace("#"+email);
+                    
 
                 }
                 $('#msg').html(response['msg']);
@@ -288,9 +288,9 @@ type: 'POST',
     },
     error: function(){
     	$("#password").val("");
-    	if (count>=5) {
+    	if (count>=2) {
     		count=0;
-    		window.location.replace("#"+email);
+    		
     	
     	$("#msg").show();
     	$('#msg').html("Your Password is incorrect.! Please try again");
